@@ -1,0 +1,132 @@
+    1  ifco
+    2  ip a
+    3  dhclient -v
+    4  ls
+    5  ip a
+    6  dhclient -v
+    7  ip a
+    8  dhclient -r
+    9  ip a
+   10  nmcli con show
+   11  nmcli con modify "System enp1s0" ipv4.address "192.168.122.50/24 192.168.122.1" ipv4.dns "192.168.122.254" ipv4.method static
+   12  nmcli con modify "enp1s0" ipv4.address "192.168.122.50/24 192.168.122.1" ipv4.dns "192.168.122.254" ipv4.method static
+   13  nmcli con modify "enp1s0" ipv4.address "192.168.122.50/24" ipv4.dns "192.168.122.254" ipv4.method static
+   14  ip a
+   15  nmcli con down enp1s0
+   16  nmcli con up enp1s0
+   17  ip a
+   18  ping 8.8.8.8
+   19  ping 192.168.0.14
+   20  nmcli con show
+   21  vim /etc/sysconfig/network-scripts/ifcfg-enp1s0 
+   22  vi /etc/sysconfig/network-scripts/ifcfg-enp1s0 
+   23  nmcli con down enp1s0
+   24  nmcli con up enp1s0
+   25  ping 192.168.0.14
+   26  reboot
+   27  ip a
+   28  exit
+   29  hostname
+   30  vi /etc/yum.repos.d/a.repo
+   31  yum repolist all
+   32  yum install bash-completion
+   33  ping 8.8.8.8
+   34  ping google.com
+   35  vi /etc/resolv.conf 
+   36  ping google.com
+   37  yum install bash-completion
+   38  exit
+   39  ss
+   40  firewall-cmd --help
+   41  firewall-cmd --list-all
+   42  firewall-cmd --list-services
+   43  firewall-cmd --add-port=80/tcp --permanent 
+   44  firewall-cmd --list-services
+   45  firewall-cmd --list-all
+   46  firewall-cmd --get-all-rules
+   47  firewall-cmd --list-ports
+   48  systemctl status firewalld.service 
+   49  firewall-cmd --add-service=http --permanent 
+   50  firewall-cmd --list-ports
+   51  firewall-cmd --list-services
+   52  firewall-cmd --reload 
+   53  firewall-cmd --list-services
+   54  firewall-cmd --list-ports
+   55  yum install httpd -y
+   56  vim /etc/yum.repos.d/a.repo 
+   57  vi /etc/yum.repos.d/a.repo 
+   58  userdel -r john 
+   59  userdel -r natasha 
+   60  userdel -r harry 
+   61  groupdel sysadmin 
+   62  useradd -u 1800 john
+   63  passwd john 
+   64  groupadd sysadmin
+   65  useradd -G sysadmin natasha
+   66  passwd natasha 
+   67  useradd -G sysadmin sarah
+   68  userdel  -r sarah
+   69  useradd -G sysadmin sarah
+   70  passwd 
+   71  passwd sarah 
+   72  useradd -s /sbin/nologin harry
+   73  passwd harry
+   74  crontab -u natasha -e
+   75  cat /etc/crontab 
+   76  crontab -u natasha -e
+   77  cd /
+   78  rm -rvf common/
+   79  mkdir -p /common/admin
+   80  rm -rvf common/
+   81  mkdir  /common/admin
+   82  mkdir --help
+   83  mkdir -p /common/admin
+   84* chgrp sysadmin common/admin/
+   85* chgrp sysadmin common/admin
+   86  ls -ld /common/admin/
+   87  chmod 2070 /common/admin/
+   88  ls -ld /common/admin/
+   89  rm /var/tmp/fstab 
+   90  cp /etc/fstab /var/tmp/
+   91  ls -ld /var/tmp/fstab 
+   92  setfacl -m u:natasha:rw /var/tmp/fstab 
+   93  setfacl -m u:sahra:--- /var/tmp/fstab 
+   94  setfacl -m u:sahra:- /var/tmp/fstab 
+   95  setfacl -m u:sarah:- /var/tmp/fstab 
+   96  getfacl /var/tmp/fstab 
+   97  yum install chrony -y
+   98  systemctl start chrony
+   99  systemctl start chronyd
+  100  systemctl enable chronyd
+  101  vim /etc/chrony.conf 
+  102  vi /etc/chrony.conf 
+  103  systemctl restart chronyd.service 
+  104  chronyc sources
+  105  chronyc sources -v 
+  106  tail -5 /etc/passwd
+  107  id simone
+  108  tail -7 /etc/passwd
+  109  tail -12 /etc/passwd
+  110  mkdir root/found
+  111  find / -user simone -exec cp -rvf {} /root/found/ \;
+  112  ls /root/found/
+  113  ll /root/found/
+  114  ls /home/simone/
+  115  history 
+  116  ls /usr/share/dict/
+  117  yum install httpd -y
+  118  vi /etc/httpd/conf/httpd.conf 
+  119  systemctl restart httpd
+  120  yum provides semanage
+  121  yum install policycoreutils-python-utils-2.9-9.el8.noarch
+  122  ping google.com
+  123  vi /etc/resolv.conf 
+  124  ping google.com
+  125  yum install policycoreutils-python-utils-2.9-9.el8.noarch
+  126  semanage port -l | grep http
+  127  man semanage port
+  128  semanage port -a -t http_port_t -p tcp 82
+  129  systemctl restart httpd
+  130  systemctl status httpd
+  131  history 
+  132  history >> rhcsa.txt
