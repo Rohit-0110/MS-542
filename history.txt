@@ -1,0 +1,167 @@
+    1  ls-al
+    2  ls -al
+    3  ls -l
+    4  ls -a
+    5  clear
+    6  ls
+    7  ls -al
+    8  ls -al .bash_profile
+    9  cd /
+   10  ls
+   11  ll
+   12  ls -ld home/
+   13  ll
+   14  cd boot/
+   15  ls
+   16  cd
+   17  ls
+   18  cd /
+   19  ls
+   20  ll
+   21  cd usr/
+   22  ls
+   23  cd share/
+   24  ls
+   25  cd ga
+   26  cd games/
+   27  ls
+   28  ls -a
+   29  cd .
+   30  pwd
+   31  cd .
+   32  pwd
+   33  ls -a
+   34  cd ..
+   35  pwd
+   36  cd ..
+   37  pwd
+   38  cd ..
+   39  pwd
+   40  cd ..
+   41  ls
+   42  cd ..
+   43  cd /usr/share/games/
+   44  pwd
+   45  cd ...
+   46  cd /usr/
+   47  pwd
+   48  cd share/games/
+   49  ls
+   50  pwd
+   51  cd ../..
+   52  ls
+   53  pwd
+   54  cd
+   55  cd /
+   56  ls
+   57  cd usr/games/share
+   58  cd
+   59  owd
+   60  pwd
+   61  cd /usr/share/games/
+   62  ls
+   63  pwd
+   64  cd
+   65  cd /usr/
+   66  cd share/
+   67  cd ga
+   68  cd games/
+   69  ls
+   70  pwd
+   71  cd
+   72  man cd
+   73  date
+   74  cal
+   75  mkdir  earth
+   76  ll
+   77  pwd
+   78  mkdir /zoom
+   79  cd /
+   80  ll
+   81  mkdir /india/rajasthan/jaipur/grras
+   82  ls
+   83  cd
+   84  cd earth/
+   85  ls
+   86  pwd
+   87  mkdir saturn
+   88  ls
+   89  pwd
+   90  cd saturn/
+   91  ls
+   92  pwd
+   93  cd
+   94  mkdir earth/saturn/jupiter
+   95  mkdir /india/rajasthan/jaipur/grras
+   96  ls
+   97  touch file.txt
+   98  ll
+   99  vim file.txt
+  100  lsblk
+  101  vi file.txt
+  102  ls
+  103  cat file.txt
+  104  mv file.txt earth/
+  105  ls
+  106  cd earth/
+  107  ls
+  108  mkdir india
+  109  ls
+  110  cp file.txt india/
+  111  ls
+  112  cd india/
+  113  ls
+  114  cd ..
+  115  ls
+  116  cp india/ saturn/
+  117  cp -r india/ saturn/
+  118  ls
+  119  cd saturn/
+  120  ls
+  121  mv india/ jupiter/
+  122  ls
+  123  cd jupiter/
+  124  ls
+  125  cd india/
+  126  ls
+  127  pwd
+  128  ls
+  129  touch file{1..1000}.txt
+  130  ls
+  131  ll
+  132  ls
+  133  rm file1.txt
+  134  rm file2.txt
+  135  rm file3.txt
+  136  rm -f file35.txt
+  137  rm -f file39.txt
+  138  rm -f file30.txt
+  139  ls
+  140  rm -f *
+  141  ls
+  142  mkdir {1..10}
+  143  ls
+  144  rm 1
+  145  rm -r 1
+  146  cd 2
+  147  ls
+  148  touch file{1..10}.txt
+  149  cd ..
+  150  ls
+  151  rm -r 2
+  152  ls
+  153  rm -rf 2
+  154  ls
+  155  rm -rf *
+  156  ls
+  157  cd
+  158  ls
+  159  touch file{1..4}.txt
+  160  ls
+  161  rm -rf file1.txt ; rm -rf file2.txt
+  162  ls
+  163  rm file3.txt
+  164  rm file3.txt
+  165  rm file4.txt
+  166  ls
+  167  history
